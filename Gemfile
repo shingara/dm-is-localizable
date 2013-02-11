@@ -6,7 +6,7 @@ SOURCE         = ENV.fetch('SOURCE', :git).to_sym
 REPO_POSTFIX   = SOURCE == :path ? ''                                : '.git'
 DATAMAPPER     = SOURCE == :path ? Pathname(__FILE__).dirname.parent : 'https://github.com/datamapper'
 SNUSNU         = SOURCE == :path ? Pathname(__FILE__).dirname.parent : 'https://github.com/snusnu'
-DM_VERSION     = '~> 1.2'
+DM_VERSION     = '~> 1.2.0'
 DO_VERSION     = '~> 0.10.8'
 DM_DO_ADAPTERS = %w[ sqlite postgres mysql oracle sqlserver ]
 CURRENT_BRANCH = ENV.fetch('GIT_BRANCH', 'master')
@@ -19,9 +19,9 @@ gem 'dm-validations', DM_VERSION,
   SOURCE  => "#{DATAMAPPER}/dm-validations#{REPO_POSTFIX}",
   :branch => CURRENT_BRANCH
 
-gem 'dm-accepts_nested_attributes', '~> 1.1.0',
+gem 'dm-accepts_nested_attributes', DM_VERSION,
   SOURCE  => "#{SNUSNU}/dm-accepts_nested_attributes#{REPO_POSTFIX}",
-  :branch => 'refactor' #CURRENT_BRANCH
+  :branch => CURRENT_BRANCH
 
 group :development do
 

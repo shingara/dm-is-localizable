@@ -18,7 +18,7 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency('dm-core',                      '~> 1.2')
   gem.add_runtime_dependency('dm-validations',               '~> 1.2')
-  gem.add_runtime_dependency('dm-accepts_nested_attributes', '~> 1.1.0')
+  gem.add_runtime_dependency('dm-accepts_nested_attributes', '~> 1.2.0')
 
   gem.add_development_dependency('dm-constraints',           '~> 1.2')
   gem.add_development_dependency('rake',                     '~> 0.9.2')
